@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    .container {
+        max-width: 520px;
+        padding-top: 50px;
+    }
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo-wrapper {
+    margin-top: 10px;
+}
+.logo {
+    width: 150px;
+}
+
+.app-name {
+    font-size: 26px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin-top: -8px;
+    font-size: 14px;
+}
+
+.tagline {
+    margin-top: -10px;
+    font-size: 13px;
+}
+
+.login-box {
+    margin-top: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 48px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group select {
+    background: white;
+    appearance: none;
+}
+
+.form-group select option {
+    background: #e0e0e0;
+    color: #000;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #224b74;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #183955;
+}
+
+.forgot {
+    display: block;
+    margin-top: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}

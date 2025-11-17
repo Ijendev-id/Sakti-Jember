@@ -1,0 +1,166 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    background: #f3f6f8;
+    color: #2a2a2a;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 22px;
+    background: rgb(212, 212, 212);
+    box-shadow: 0 2px 4px #00000010;
+}
+
+.profile-icon img {
+    width: 34px;
+}
+
+.logo-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.logo-img {
+    width: 75px;
+}
+
+.logo-text h1 {
+    margin: 8px 0 0;
+    font-size: 28px;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.btn-kunjungan {
+    display: flex;
+    align-items: center;
+    background: #1f4162;
+    padding: 26px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    gap: 16px;
+    width: 80%;
+    max-width: 420px;
+}
+
+.btn-kunjungan img {
+    width: 40px;
+}
+
+.aktivitas-section {
+    text-align: center;
+    padding: 10px;
+}
+
+.aktivitas-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.card-aktivitas {
+    background: #d8e4ed;
+    padding: 20px;
+    border-radius: 12px;
+    width: 170px;
+    text-align: left;
+}
+
+.card-icon {
+    width: 60px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    display: block;
+    margin-left: 0;
+}
+
+.card-aktivitas p {
+    margin: 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px #00000020;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer-nav i {
+    font-size: 20px;
+}
+
+@media (min-width: 900px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .logo-section {
+        margin-top: 40px;
+    }
+
+    .aktivitas-grid {
+        gap: 30px;
+    }
+
+    .btn-kunjungan {
+        max-width: 500px;
+        padding: 32px;
+        font-size: 20px;
+    }
+
+    .footer-nav {
+        position: static;
+        margin-top: 40px;
+        width: 100%;
+        max-width: 1200px;
+        border-radius: 10px;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .footer-nav a {
+        padding: 10px 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px #00000015;
+    }
+}
