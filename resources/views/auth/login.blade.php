@@ -178,7 +178,7 @@
     <script>
         // Konstanta credential (frontend-only, sesuai permintaan)
         const VALID_ID = "14300";
-        const VALID_PASSWORD = "Jemberalun2";
+        const VALID_PASSWORD = "Jemberalon2";
 
         // Elemen
         const loginButton = document.getElementById('loginButton');

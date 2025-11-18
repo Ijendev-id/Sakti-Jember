@@ -192,7 +192,7 @@
                 <p>(Sistem Analitik Kawasan Terintegrasi)</p>
 
                 <!-- titik status hijau kecil -->
-                <div class="status-dot" aria-hidden="true"></div>
+
             </section>
 
             <!-- tombol besar -->
