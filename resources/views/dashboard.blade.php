@@ -10,19 +10,22 @@
     <!-- Font Awesome (icon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
+    <!-- Optional: Google Font (sesuaikan jika ingin) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Reset kecil */
+        /* Reset & dasar */
         * { box-sizing: border-box; margin:0; padding:0; }
         html,body { height:100%; }
-
-        body{
-            font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-            background: #f5f7fa;
-            color: #14252b;
+        body {
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: #f6f8fa;
+            color: #132a2f;
             -webkit-font-smoothing:antialiased;
             -moz-osx-font-smoothing:grayscale;
-            padding-bottom: 84px; /* ruang untuk footer nav */
+            padding-bottom: 92px; /* ruang footer */
         }
+        .wrap { max-width:420px; margin:0 auto; }
 
         /* Header */
         .header {
@@ -30,247 +33,228 @@
             align-items:center;
             justify-content:space-between;
             padding:12px 16px;
-            background: #fff;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+            background:#fff;
+            border-bottom:1px solid rgba(0,0,0,0.06);
             position:sticky;
             top:0;
             z-index:50;
         }
-        .header-left h2 {
-            font-weight:600;
-            font-size:16px;
-        }
-        .header-right .profile-icon img {
-            width:36px;
-            height:36px;
-            border-radius:50%;
-            object-fit:cover;
-        }
+        .header strong { font-size:16px; }
+        .profile-icon img { width:36px; height:36px; border-radius:50%; object-fit:cover; }
 
-        /* Logo section */
-        .logo-section {
-            display:flex;
-            align-items:center;
-            gap:12px;
-            padding:18px 18px 8px 18px;
-            background: transparent;
-        }
-        .logo-img {
-            width:64px;
-            height:64px;
-            object-fit:contain;
-            border-radius:8px;
-        }
-        .logo-text h1 {
-            font-size:20px;
-            margin-bottom:4px;
-            letter-spacing:0.6px;
-        }
-        .logo-text p {
-            margin:0;
-            font-size:12px;
-            color:#526162;
-        }
-        .kawasan-name {
-            margin-top:6px;
-            font-size:13px;
-            color:#2b6b7a;
-            padding-left:92px; /* agar muncul di bawah teks, sejajar */
-        }
-
-        /* Button besar */
-        .btn-section {
-            padding: 16px;
-        }
-        .btn-kunjungan {
-            display:flex;
-            align-items:center;
-            gap:14px;
-            background:#2f5b68;
-            color:#fff;
-            text-decoration:none;
-            padding:18px;
-            border-radius:12px;
-            box-shadow: 0 6px 18px rgba(47,91,104,0.15);
-        }
-        .btn-kunjungan img {
-            width:44px;
-            height:44px;
-            background: rgba(255,255,255,0.08);
-            padding:8px;
-            border-radius:10px;
-        }
-        .btn-kunjungan span {
-            font-weight:700;
-            font-size:16px;
-        }
-
-        /* Aktivitas */
-        .aktivitas-section {
-            padding: 12px 16px 80px 16px;
-        }
-        .aktivitas-section h2 {
-            margin-bottom:12px;
-            font-size:16px;
-            color:#1c373f;
-        }
-
-        .aktivitas-grid {
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            gap:12px;
-        }
-
-        .card-aktivitas {
-            background: #e7eef1;
-            border-radius:10px;
-            padding:12px;
-            display:flex;
-            gap:12px;
-            align-items:center;
-            box-shadow: 0 6px 16px rgba(20,37,43,0.06);
-            min-height:86px;
-        }
-        .card-icon {
-            width:48px;
-            height:48px;
-            object-fit:cover;
-            border-radius:8px;
-            background:#2f5b68;
-            display:inline-block;
-            padding:8px;
-        }
-        .card-text p {
-            font-size:14px;
-            color:#163033;
-        }
-        .card-text b { font-size:18px; display:block; margin-top:6px; color:#163033; }
-
-        /* Footer nav - mobile style */
-        .footer-nav {
-            position:fixed;
-            left:0;
-            bottom:0;
-            width:100%;
-            background:#fff;
-            border-top:1px solid rgba(0,0,0,0.06);
-            display:flex;
-            justify-content:space-around;
-            padding:8px 0;
-            z-index:60;
-            box-shadow: 0 -4px 18px rgba(0,0,0,0.04);
-        }
-        .footer-nav a {
+        /* area utama */
+        .main {
+            padding: 18px 18px 0 18px;
             display:flex;
             flex-direction:column;
             align-items:center;
-            gap:4px;
+            gap: 14px;
+        }
+
+        /* Logo & judul tengah */
+        .brand {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:6px;
+            margin-top:6px;
+        }
+        .brand .logo {
+            width:76px;
+            height:76px;
+            border-radius:50%;
+            object-fit:cover;
+            background: #fff;
+            padding:8px;
+            box-shadow: 0 6px 18px rgba(20,37,43,0.06);
+        }
+        .brand h1 {
+            font-size:22px;
+            margin-top:4px;
+            letter-spacing:0.6px;
+        }
+        .brand p { font-size:12px; color:#6b7f85; margin-top:-2px; }
+
+        /* titik kecil hijau */
+        .status-dot {
+            width:8px;
+            height:8px;
+            background:#00a86b;
+            border-radius:50%;
+            margin-top:4px;
+        }
+
+        /* Tombol besar (kartu) */
+        .cta-card {
+            width:100%;
+            max-width:360px;
+            background:#2f5b68;
+            color:#fff;
+            border-radius:14px;
+            padding:18px 18px;
+            display:flex;
+            align-items:center;
+            gap:16px;
+            box-shadow: 0 10px 28px rgba(47,91,104,0.12);
             text-decoration:none;
-            color:#6b7f85;
-            font-size:12px;
         }
-        .footer-nav a i { font-size:18px; }
+        .cta-card .icon {
+            width:56px;
+            height:56px;
+            border-radius:12px;
+            background: rgba(255,255,255,0.08);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:26px;
+        }
+        .cta-card .label {
+            font-weight:700;
+            font-size:18px;
+        }
 
-        /* responsive tweaks */
+        /* Judul seksion ringkasan */
+        .section-title {
+            width:100%;
+            margin-top:8px;
+            margin-bottom:6px;
+            font-weight:600;
+            font-size:16px;
+            color:#173435;
+            padding-left:6px;
+        }
+
+        /* grid kartu aktivitas */
+        .grid {
+            width:100%;
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:12px;
+            margin-top:2px;
+        }
+        .stat-card {
+            background:#e8f0f2;
+            border-radius:12px;
+            padding:14px;
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+            box-shadow: 0 8px 20px rgba(20,37,43,0.06);
+            min-height:110px;
+            position:relative;
+            overflow:visible;
+        }
+        .stat-top {
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+        .stat-icon {
+            width:44px;
+            height:44px;
+            border-radius:10px;
+            background:#2f5b68;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:20px;
+            color:#fff;
+        }
+        .stat-text p { font-size:13px; color:#163033; margin-bottom:6px; }
+        .stat-text b { font-size:18px; color:#163033; }
+
+        /* Tampilan mobile bottom spacing */
+        .spacer { height:14px; }
+
+        /* responsive */
         @media (min-width:640px) {
-            .container-wide { max-width:640px; margin:0 auto; }
-            .logo-text h1 { font-size:24px; }
-            .btn-kunjungan span { font-size:18px; }
-            .aktivitas-grid { gap:16px; }
-        }
-
-        /* small screen improvements */
-        @media (max-width:360px) {
-            .logo-text h1 { font-size:18px; }
-            .kawasan-name { padding-left:84px; font-size:12px; }
-            .card-text b { font-size:16px; }
+            .wrap { max-width:640px; }
+            .brand h1 { font-size:24px; }
+            .cta-card .label { font-size:20px; }
+            .stat-card { min-height:120px; }
         }
     </style>
 </head>
 
 <body>
-    <div class="container-wide">
+    <div class="wrap">
         <header class="header">
-            <div class="header-left">
-                <!-- <h2>Beranda</h2> -->
-                <strong>Beranda</strong>
-            </div>
-            <div class="header-right">
-                <div class="profile-icon" title="Profil">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="User">
-                </div>
+            <div><strong>Beranda</strong></div>
+            <div class="profile-icon" title="Profil">
+                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="User">
             </div>
         </header>
 
-        <section class="logo-section">
-            <img src="/asset/img/logo.png" class="logo-img" alt="SAKTI Logo">
-            <div class="logo-text">
+        <main class="main" role="main" aria-labelledby="home-title">
+            <section class="brand" aria-hidden="false">
+                <img src="/asset/img/logo.png" alt="SAKTI Logo" class="logo">
                 <h1>SAKTI</h1>
                 <p>(Sistem Analitik Kawasan Terintegrasi)</p>
 
-                <!-- Nama kawasan akan diisi via JS -->
-                <div id="kawasanTerpilih" class="kawasan-name">— Kawasan belum dipilih —</div>
-            </div>
-        </section>
+                <!-- titik status hijau kecil -->
+                <div class="status-dot" aria-hidden="true"></div>
+            </section>
 
-        <section class="btn-section">
-            <a class="btn-kunjungan" href="{{ route('kunjungan.create') }}" id="btnMulai">
-                <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="icon">
-                <span>Mulai Kunjungan Baru</span>
+            <!-- tombol besar -->
+            <a href="{{ route('kunjungan.create') }}" class="cta-card" id="btnMulai" aria-label="Mulai Kunjungan Baru">
+                <div class="icon">
+                    <!-- icon map marker -->
+                    <i class="fa-solid fa-map-pin"></i>
+                </div>
+                <div class="label">Mulai Kunjungan Baru</div>
             </a>
-        </section>
 
-        <section class="aktivitas-section">
-            <h2>Ringkasan Aktivitas Anda</h2>
+            <div class="spacer"></div>
 
-            <div class="aktivitas-grid">
+            <div class="section-title">Ringkasan Aktivitas Anda</div>
 
-                <div class="card-aktivitas" role="button" tabindex="0" aria-label="Kunjungan Hari Ini">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2942/2942664.png" class="card-icon" alt="kunjungan">
-                    <div class="card-text">
-                        <p>Kunjungan Hari Ini</p>
-                        <b id="kunjunganCount">4</b>
+            <div class="grid" role="list">
+                <div class="stat-card" role="listitem" tabindex="0" aria-label="Kunjungan Hari Ini">
+                    <div class="stat-top">
+                        <div class="stat-icon"><i class="fa-solid fa-user-plus"></i></div>
+                        <div class="stat-text">
+                            <p>Kunjungan Hari Ini</p>
+                            <b id="kunjunganCount">4</b>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card-aktivitas" role="button" tabindex="0" aria-label="Tindak Lanjut Pending">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2910/2910797.png" class="card-icon" alt="tindak">
-                    <div class="card-text">
-                        <p>Tindak Lanjut Pending</p>
-                        <b id="pendingCount">3</b>
+                <div class="stat-card" role="listitem" tabindex="0" aria-label="Tindak Lanjut Pending">
+                    <div class="stat-top">
+                        <div class="stat-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <div class="stat-text">
+                            <p>Tindak Lanjut Pending</p>
+                            <b id="pendingCount">3</b>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
-        </section>
+            <div style="height:40px;"></div>
+        </main>
     </div>
 
-    {{-- include footer modular --}}
+    {{-- footer nav (mobile) --}}
     @include('layouts.footer')
 
     <script>
-        // Ambil nama kawasan dari sessionStorage (disimpan saat login)
-        const kawasanEl = document.getElementById('kawasanTerpilih');
+        // Isi nama kawasan dari sessionStorage (sama seperti sebelumnya)
         const kawasan = sessionStorage.getItem('kawasan_terpilih');
-
         if (kawasan && kawasan.trim() !== '') {
-            kawasanEl.textContent = kawasan;
-        } else {
-            kawasanEl.textContent = '— Kawasan belum dipilih —';
+            // kalau Anda ingin menampilkan nama di header/brand, tambahkan elemen dan set textContent
+            // contoh: document.querySelector('.brand p').textContent = kawasan;
         }
 
-        // contoh: kalau mau ambil jumlah dinamis, Anda bisa ganti dari fetch/ajax
-        // untuk sekarang kita pakai static values (sesuaikan bila perlu)
+        // data stat (saat ini statik; ganti dengan fetch/ajax bila perlu)
         document.getElementById('kunjunganCount').textContent = '4';
         document.getElementById('pendingCount').textContent = '3';
 
-        // tombol mulai kunjungan: arahkan ke halaman form kunjungan atau aksi lain
-        document.getElementById('btnMulai').addEventListener('click', function(e){
-            e.preventDefault();
-            // contoh redirect ke halaman pembuatan kunjungan baru
-            // ganti '/kunjungan/create' sesuai route aplikasi Anda
-            window.location.href = '/kunjungan/create';
+        // klik CTA
+        document.getElementById('btnMulai').addEventListener('click', function(e) {
+            // default anchor akan redirect; di sini mencegah default agar route blade bisa dipakai saat development
+            // hapus e.preventDefault() jika ingin langsung menggunakan href
+            // e.preventDefault();
+            // window.location.href = '/kunjungan/create';
         });
     </script>
 </body>

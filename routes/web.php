@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KunjunganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +63,7 @@ Route::get('/profil', function () {
 Route::get('/profil/edit', function () {
     return view('profiledit');  // pastikan file bernama profiledit.blade.php
 })->name('profil.edit');
+
+
+
+Route::get('/kunjungan/{id}', [KunjunganController::class, 'show'])->name('kunjungan.show');
