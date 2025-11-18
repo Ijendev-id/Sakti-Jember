@@ -85,7 +85,7 @@
         <header>
             <h1>Riwayat Kunjungan</h1>
             <div class="profile-icon" title="Profil">
-                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="User">
+                <a href="/profil"><img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="User"></a>
             </div>
         </header>
 

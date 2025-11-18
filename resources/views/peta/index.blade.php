@@ -37,7 +37,7 @@
             top:0;
             z-index:50;
         }
-        
+
         .header-right .profile-icon img {
             width:36px;
             height:36px;
@@ -126,12 +126,12 @@
     <div class="wrapper">
 
         <div class="header">
-            <div class="header-left">                
+            <div class="header-left">
                 <strong>Peta Kawasan</strong>
             </div>
             <div class="header-right">
                 <div class="profile-icon" title="Profil">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="User">
+                    <a href="/profil"><img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="User"></a>
                 </div>
             </div>
         </div>
@@ -195,15 +195,15 @@
 
     <script>
         //open banyuwangi
-        var map = L.map('map').setView([-8.2196, 114.3691], 13);
+        var map = L.map('map').setView([-8.1740391,113.6975711], 13);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19
         }).addTo(map);
 
-        L.marker([-8.2196, 114.3691])
+        L.marker([-8.1740391,113.6975711])
             .addTo(map)
-            .bindPopup("Lokasi Banyuwangi")
+            .bindPopup("Lokasi Jember")
             .openPopup();
     </script>
 

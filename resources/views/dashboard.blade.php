@@ -181,7 +181,7 @@
         <header class="header">
             <div><strong>Beranda</strong></div>
             <div class="profile-icon" title="Profil">
-                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="User">
+                <a href="/profil"><img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="User"></a>
             </div>
         </header>
 
